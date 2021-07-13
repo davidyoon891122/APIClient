@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD14AE5D269E510500349266 /* FastTyping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD14AE5C269E510500349266 /* FastTyping.jpg */; };
 		AD2A32D8269C6C7C00781FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2A32D7269C6C7C00781FF0 /* AppDelegate.swift */; };
 		AD2A32DA269C6C7C00781FF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2A32D9269C6C7C00781FF0 /* SceneDelegate.swift */; };
 		AD2A32DC269C6C7C00781FF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2A32DB269C6C7C00781FF0 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD14AE5C269E510500349266 /* FastTyping.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FastTyping.jpg; sourceTree = "<group>"; };
 		AD2A32D4269C6C7C00781FF0 /* APIClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2A32D7269C6C7C00781FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD2A32D9269C6C7C00781FF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD14AE5B269E50FD00349266 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AD14AE5C269E510500349266 /* FastTyping.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		AD2A32CB269C6C7C00781FF0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		AD2A32D6269C6C7C00781FF0 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				AD14AE5B269E50FD00349266 /* images */,
 				AD2A32D7269C6C7C00781FF0 /* AppDelegate.swift */,
 				AD2A32D9269C6C7C00781FF0 /* SceneDelegate.swift */,
 				AD2A32DB269C6C7C00781FF0 /* ViewController.swift */,
@@ -126,6 +137,7 @@
 			files = (
 				AD2A32E4269C6C7D00781FF0 /* LaunchScreen.storyboard in Resources */,
 				AD2A32E1269C6C7D00781FF0 /* Assets.xcassets in Resources */,
+				AD14AE5D269E510500349266 /* FastTyping.jpg in Resources */,
 				AD2A32DF269C6C7C00781FF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
