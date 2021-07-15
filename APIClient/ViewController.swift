@@ -28,8 +28,16 @@ class ViewController: UIViewController {
             print("User PWD : \(userPWD)")
         }
         
+        let newsViewController = self.storyboard?.instantiateViewController(withIdentifier: "NewsViewController")
         
+        //newsViewController?.modalPresentationStyle = .fullScreen
         
+        //presnet할 경우 뒤로 돌아갈 방법을 다르게 구현 해주어야 함.
+        //self.present(newsViewController!, animated: true, completion: nil)
+        
+        if let view = newsViewController {
+            self.navigationController?.pushViewController(view, animated: true)
+        }
 
         
     }
