@@ -54,8 +54,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="3al-H3-XOP"/>
                     <connections>
-                        <outlet property="textViewUserID" destination="6Vt-5s-vHu" id="rba-ad-dIN"/>
-                        <outlet property="textViewUserPWD" destination="6Vt-5s-vHu" id="tf8-OD-PAv"/>
+                        <outlet property="textFieldUserID" destination="SeK-Fo-eCe" id="tLf-o8-laz"/>
+                        <outlet property="textFieldUserPWD" destination="6Vt-5s-vHu" id="QQk-La-RNo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
