@@ -40,12 +40,35 @@ class ViewController: UIViewController, UITextFieldDelegate {
             present(pwdAlertController, animated: true, completion: nil)
         }else {
             // 유저 정보 체크 모델에 유저 데이터 넣어서 던짐
+            let userID = textFieldUserID.text!
+            let userPWD = textFieldUserPWD.text!
+            let loginModel = LoginModel()
+            loginModel.userID = userID
+            loginModel.userPWD = userPWD
+            loginModel.printUserInfo()
+            let loginResult = loginModel.checkUserInfo()
             
-            let newsViewController = self.storyboard?.instantiateViewController(withIdentifier: "NewsViewController")
+            print("loginResult: \(loginResult) ")
+            // 1. change return type from String -> 0000(4digis)
+            // 2. read message from code
             
-            if let view = newsViewController {
-                self.navigationController?.pushViewController(view, animated: true)
+            if loginResult == 0003 {
+                let newsViewController = self.storyboard?.instantiateViewController(withIdentifier: "NewsViewController")
+                
+                if let view = newsViewController {
+                    self.navigationController?.pushViewController(view, animated: true)
+                }
+            }else {
+                var errorMessage = loginModel.getErrorMessage(resultCode: loginResult)
+                var errorAlert = UIAlertController(title: "Login Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+                var errorAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+                
+                errorAlert.addAction(errorAction)
+                self.present(errorAlert, animated: true, completion: nil)
+                
+                
             }
+            
         }
         
         //newsViewController?.modalPresentationStyle = .fullScreen
