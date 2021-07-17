@@ -89,6 +89,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="lblMyCell" destination="yo6-G7-Y4Y" id="yeO-u8-xzs"/>
+                                    <segue destination="OBo-vd-Cxf" kind="show" identifier="NewsDetail" id="H4Y-Cg-ajm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -100,7 +101,50 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6e-Vl-Pbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1753.8461538461538" y="78.909952606635073"/>
+            <point key="canvasLocation" x="1669" y="79"/>
+        </scene>
+        <!--News Detail Contoller-->
+        <scene sceneID="ZCK-2M-a8Y">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailContoller" id="OBo-vd-Cxf" customClass="NewsDetailContoller" customModule="APIClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="prj-YS-CxS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kSU-ks-Hoe">
+                                <rect key="frame" x="16" y="10" width="358" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="T3I-5f-Qaq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kQ-GJ-YIt">
+                                <rect key="frame" x="16" y="193" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Kg-SZ-GwB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8kQ-GJ-YIt" firstAttribute="top" secondItem="kSU-ks-Hoe" secondAttribute="bottom" constant="23" id="5N8-xk-NL2"/>
+                            <constraint firstItem="8Kg-SZ-GwB" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8kQ-GJ-YIt" secondAttribute="bottom" constant="16" id="Cva-r1-Egp"/>
+                            <constraint firstItem="8Kg-SZ-GwB" firstAttribute="trailing" secondItem="kSU-ks-Hoe" secondAttribute="trailing" constant="16" id="GZu-BO-jUJ"/>
+                            <constraint firstItem="kSU-ks-Hoe" firstAttribute="top" secondItem="8Kg-SZ-GwB" secondAttribute="top" constant="10" id="GdO-St-16k"/>
+                            <constraint firstItem="8kQ-GJ-YIt" firstAttribute="leading" secondItem="8Kg-SZ-GwB" secondAttribute="leading" constant="16" id="keg-wE-vQb"/>
+                            <constraint firstItem="8Kg-SZ-GwB" firstAttribute="trailing" secondItem="8kQ-GJ-YIt" secondAttribute="trailing" constant="16" id="tnR-p1-hwu"/>
+                            <constraint firstItem="kSU-ks-Hoe" firstAttribute="leading" secondItem="8Kg-SZ-GwB" secondAttribute="leading" constant="16" id="y2C-3q-hd9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uxt-uu-Tzo"/>
+                    <connections>
+                        <outlet property="newsContentsView" destination="8kQ-GJ-YIt" id="U0f-Cs-3a4"/>
+                        <outlet property="newsImageView" destination="kSU-ks-Hoe" id="xHt-bh-hpV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qe-vg-8AP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2464.6153846153848" y="78.909952606635073"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aq3-fN-dyP">

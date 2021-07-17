@@ -107,8 +107,54 @@ class NewsTableViewController: UITableViewController {
     */
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Clicked !! \(indexPath.row)")
+        //print("Clicked !! \(indexPath.row)")
+        // 이방식은 바닥에서 올라오는 방식
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let newsDetail = storyboard?.instantiateViewController(identifier: "NewsDetailContoller") as! NewsDetailContoller
+        
+        if let news = newsData{
+            let row = news[indexPath.row]
+            
+            if let r = row as? Dictionary<String,Any> {
+                if let imageUrl = r["urlToImage"] as? String {
+                    newsDetail.imageURL = imageUrl
+                }
+                
+                if let contents = r["description"] as? String {
+                    newsDetail.contents = contents
+                }
+            }
+            
+        }
+        
+        //showDetailViewController(newsDetail, sender: nil)
+        
+        
     }
+    
+    //segue 방식 화면을 넘김(백버튼 존재)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let id = segue.identifier, "NewsDetail" == id {
+            if let contoller = segue.destination as? NewsDetailContoller {
+                if let news = newsData {
+                    if let indexPath = tableView.indexPathForSelectedRow {
+                        let row = news[indexPath.row]
+                        if let value = row as? Dictionary<String, Any> {
+                            if let imageUrl = value["urlToImage"] as? String {
+                                contoller.imageURL = imageUrl
+                            }
+                            
+                            if let contents = value["description"] as? String {
+                                contoller.contents = contents
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
     
     
     func getNews() {

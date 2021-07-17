@@ -15,6 +15,7 @@
 		AD2A32DF269C6C7C00781FF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2A32DD269C6C7C00781FF0 /* Main.storyboard */; };
 		AD2A32E1269C6C7D00781FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2A32E0269C6C7D00781FF0 /* Assets.xcassets */; };
 		AD2A32E4269C6C7D00781FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2A32E2269C6C7D00781FF0 /* LaunchScreen.storyboard */; };
+		AD36BE3326A32ECF002613F8 /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36BE3226A32ECF002613F8 /* NewsDetailController.swift */; };
 		AD39DD1226A0667500EF537C /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39DD1126A0667500EF537C /* MyCell.swift */; };
 		AD6028CB26A13F41008C1346 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6028CA26A13F41008C1346 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		AD2A32E0269C6C7D00781FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD2A32E3269C6C7D00781FF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD2A32E5269C6C7D00781FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD36BE3226A32ECF002613F8 /* NewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
 		AD39DD1126A0667500EF537C /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		AD6028CA26A13F41008C1346 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 				AD1D18B326A01A7700FD03BC /* NewsTableViewController.swift */,
 				AD39DD1126A0667500EF537C /* MyCell.swift */,
 				AD6028CA26A13F41008C1346 /* LoginModel.swift */,
+				AD36BE3226A32ECF002613F8 /* NewsDetailController.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				AD6028CB26A13F41008C1346 /* LoginModel.swift in Sources */,
 				AD39DD1226A0667500EF537C /* MyCell.swift in Sources */,
 				AD2A32DC269C6C7C00781FF0 /* ViewController.swift in Sources */,
+				AD36BE3326A32ECF002613F8 /* NewsDetailController.swift in Sources */,
 				AD2A32D8269C6C7C00781FF0 /* AppDelegate.swift in Sources */,
 				AD2A32DA269C6C7C00781FF0 /* SceneDelegate.swift in Sources */,
 			);
