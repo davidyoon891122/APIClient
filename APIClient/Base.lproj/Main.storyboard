@@ -183,21 +183,114 @@
             </objects>
             <point key="canvasLocation" x="1667.6923076923076" y="78.909952606635073"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="cKW-ga-Kli">
             <objects>
-                <viewController id="2Ih-5K-NZ1" sceneMemberID="viewController">
+                <viewController id="2Ih-5K-NZ1" customClass="WebViewController" customModule="APIClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8qY-pC-ukL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYz-lU-Bug">
+                                <rect key="frame" x="16" y="108" width="358" height="592"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lbh-QQ-gWf">
+                                <rect key="frame" x="16" y="54" width="358" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-6C-xch">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="OVm-rQ-PJa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-YQ-GZe">
+                                        <rect key="frame" x="50" y="0.0" width="230" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="230" id="RMb-iQ-eGz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHg-SP-QxR">
+                                        <rect key="frame" x="290" y="0.0" width="68" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="GIP-nW-YLV"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="btnWebAction:" destination="2Ih-5K-NZ1" eventType="touchUpInside" id="8xc-iR-5gB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-TO-SL0">
+                                <rect key="frame" x="0.0" y="712" width="390" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Twh-M1-thF"/>
+                                    <barButtonItem systemItem="stop" id="p0l-cq-1eh">
+                                        <connections>
+                                            <action selector="btnStop:" destination="2Ih-5K-NZ1" id="JX6-5e-hHT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YZB-Yo-hMW"/>
+                                    <barButtonItem systemItem="refresh" id="ZXL-XH-ARG">
+                                        <connections>
+                                            <action selector="btnReflesh:" destination="2Ih-5K-NZ1" id="MRH-U4-0ai"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vNb-vq-p9U"/>
+                                    <barButtonItem systemItem="rewind" id="aiJ-eN-U25">
+                                        <connections>
+                                            <action selector="btnRewind:" destination="2Ih-5K-NZ1" id="jv8-Uq-I32"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kDe-6L-JMU"/>
+                                    <barButtonItem systemItem="fastForward" id="OtP-cb-hPG">
+                                        <connections>
+                                            <action selector="btnForward:" destination="2Ih-5K-NZ1" id="7sS-rp-eCf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="I4d-yi-GQi"/>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="tgb-Au-8Hc">
+                                <rect key="frame" x="185" y="396" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="D9j-ly-BgK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lbh-QQ-gWf" firstAttribute="leading" secondItem="D9j-ly-BgK" secondAttribute="leading" constant="16" id="7yB-mz-kuQ"/>
+                            <constraint firstItem="OGy-TO-SL0" firstAttribute="bottom" secondItem="D9j-ly-BgK" secondAttribute="bottom" id="9H5-od-XdT"/>
+                            <constraint firstItem="OGy-TO-SL0" firstAttribute="leading" secondItem="D9j-ly-BgK" secondAttribute="leading" id="BmW-HX-hmm"/>
+                            <constraint firstItem="D9j-ly-BgK" firstAttribute="trailing" secondItem="TYz-lU-Bug" secondAttribute="trailing" constant="16" id="CQf-2M-16j"/>
+                            <constraint firstItem="TYz-lU-Bug" firstAttribute="top" secondItem="Lbh-QQ-gWf" secondAttribute="bottom" constant="20" id="hBv-Ti-KbB"/>
+                            <constraint firstItem="OGy-TO-SL0" firstAttribute="top" secondItem="TYz-lU-Bug" secondAttribute="bottom" constant="12" id="mvL-GF-Kgt"/>
+                            <constraint firstItem="TYz-lU-Bug" firstAttribute="leading" secondItem="D9j-ly-BgK" secondAttribute="leading" constant="16" id="vRF-1u-fmS"/>
+                            <constraint firstItem="OGy-TO-SL0" firstAttribute="trailing" secondItem="D9j-ly-BgK" secondAttribute="trailing" id="xHz-gO-g3N"/>
+                            <constraint firstItem="Lbh-QQ-gWf" firstAttribute="top" secondItem="D9j-ly-BgK" secondAttribute="top" constant="10" id="ym5-Zn-qtQ"/>
+                            <constraint firstItem="D9j-ly-BgK" firstAttribute="trailing" secondItem="Lbh-QQ-gWf" secondAttribute="trailing" constant="16" id="zPD-cO-eAU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="73l-zo-aLx"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="tgb-Au-8Hc" id="BP6-D9-Oy4"/>
+                        <outlet property="lblURLField" destination="Glc-YQ-GZe" id="Agr-qj-X0z"/>
+                        <outlet property="webView" destination="TYz-lU-Bug" id="qZh-4a-IjT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSD-kg-IFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2226" y="820"/>
+            <point key="canvasLocation" x="2224.6153846153848" y="819.66824644549763"/>
         </scene>
     </scenes>
     <resources>
