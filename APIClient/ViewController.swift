@@ -13,12 +13,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var textFieldUserPWD: UITextField!
     
+    let testSwitch: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         textFieldUserID.delegate = self
         textFieldUserPWD.delegate = self
+        
+        if testSwitch {
+            textFieldUserID.text = "davidyoon"
+            textFieldUserPWD.text = "test1234"
+        }
+        
+        
         
     }
 
@@ -53,7 +62,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             // 2. read message from code
             
             if loginResult == 0003 {
-                let newsViewController = self.storyboard?.instantiateViewController(withIdentifier: "NewsViewController")
+                let newsViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
                 
                 if let view = newsViewController {
                     self.navigationController?.pushViewController(view, animated: true)
