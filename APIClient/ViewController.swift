@@ -68,9 +68,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     self.navigationController?.pushViewController(view, animated: true)
                 }
             }else {
-                var errorMessage = loginModel.getErrorMessage(resultCode: loginResult)
-                var errorAlert = UIAlertController(title: "Login Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
-                var errorAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+                let errorMessage = loginModel.getErrorMessage(resultCode: loginResult)
+                let errorAlert = UIAlertController(title: "Login Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+                let errorAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
                 
                 errorAlert.addAction(errorAction)
                 self.present(errorAlert, animated: true, completion: nil)

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AD14AE5D269E510500349266 /* FastTyping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD14AE5C269E510500349266 /* FastTyping.jpg */; };
 		AD1D18B426A01A7700FD03BC /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D18B326A01A7700FD03BC /* NewsTableViewController.swift */; };
+		AD29C29F26A6D74600DC224A /* TodoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C29E26A6D74600DC224A /* TodoTableController.swift */; };
+		AD29C2A126A6D97700DC224A /* TabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C2A026A6D97700DC224A /* TabBarContoller.swift */; };
+		AD29C2A326A6F02E00DC224A /* AddTodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29C2A226A6F02E00DC224A /* AddTodoController.swift */; };
 		AD2A32D8269C6C7C00781FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2A32D7269C6C7C00781FF0 /* AppDelegate.swift */; };
 		AD2A32DA269C6C7C00781FF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2A32D9269C6C7C00781FF0 /* SceneDelegate.swift */; };
 		AD2A32DC269C6C7C00781FF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2A32DB269C6C7C00781FF0 /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		AD14AE5C269E510500349266 /* FastTyping.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FastTyping.jpg; sourceTree = "<group>"; };
 		AD1D18B326A01A7700FD03BC /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		AD29C29E26A6D74600DC224A /* TodoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableController.swift; sourceTree = "<group>"; };
+		AD29C2A026A6D97700DC224A /* TabBarContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContoller.swift; sourceTree = "<group>"; };
+		AD29C2A226A6F02E00DC224A /* AddTodoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoController.swift; sourceTree = "<group>"; };
 		AD2A32D4269C6C7C00781FF0 /* APIClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2A32D7269C6C7C00781FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD2A32D9269C6C7C00781FF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				AD6028CA26A13F41008C1346 /* LoginModel.swift */,
 				AD36BE3226A32ECF002613F8 /* NewsDetailController.swift */,
 				AD2E06FB26A416AF00D63B15 /* WebViewController.swift */,
+				AD29C29E26A6D74600DC224A /* TodoTableController.swift */,
+				AD29C2A026A6D97700DC224A /* TabBarContoller.swift */,
+				AD29C2A226A6F02E00DC224A /* AddTodoController.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -165,6 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD1D18B426A01A7700FD03BC /* NewsTableViewController.swift in Sources */,
+				AD29C29F26A6D74600DC224A /* TodoTableController.swift in Sources */,
+				AD29C2A326A6F02E00DC224A /* AddTodoController.swift in Sources */,
+				AD29C2A126A6D97700DC224A /* TabBarContoller.swift in Sources */,
 				AD6028CB26A13F41008C1346 /* LoginModel.swift in Sources */,
 				AD39DD1226A0667500EF537C /* MyCell.swift in Sources */,
 				AD2A32DC269C6C7C00781FF0 /* ViewController.swift in Sources */,
